@@ -1,0 +1,9 @@
+{{ config(materialized='table') }}
+
+SELECT DISTINCT
+    PRODUCT_ID,
+    CATEGORY,
+    SUB_CATEGORY,
+    PRODUCT_NAME
+FROM
+    DEMO_DBT.DEMO.SALES_RAW

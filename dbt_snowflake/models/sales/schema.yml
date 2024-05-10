@@ -1,0 +1,43 @@
+
+version: 2
+
+models:
+  - name: dimproduct
+    description: "table containing product dimension"
+    columns:
+      - name: PRODUCT_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: CATEGORY
+        description: "The category of the product"
+        tests:
+          - unique
+      - name: SUB_CATEGORY
+        description: "The sub-category of the product"
+        tests:
+          - unique
+      - name: PRODUCT_NAME
+        description: "The name of the product"
+        tests:
+          - unique
+
+  - name: dimcustomer
+    description: "table containing product dimension"
+    columns:
+      - name: CUSTOMER_ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: ORDER_ID
+        description: "Foreign Key"
+        tests:
+          - unique
+      - name: SEGMENT
+        description: "The sub-category of the product"
+        tests:
+          - unique
+      - name: CUSTOMER_NAME
+        description: "The name of the product"
+        tests:
+          - unique
